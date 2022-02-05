@@ -1,2 +1,93 @@
-# ibletz.github.io
-public website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="results.html" method="GET" enctype="multipart/form-data">
+        <div>
+            <!--giving the input a name and having label 'for' point to it-->
+            <!--lets user click on label name to go to input box-->
+            <!--Preferred method-->
+            <label for="name">Name*</label>
+            <input type="text" name="name" id="name" placeholder="username" required>
+        </div>
+        <div>
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="1" max="200">
+        </div>
+        <div>
+            <label for="date">Birthdate</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div>
+            Favorite Food
+            <div>
+                <label for="banana">Banana</label>
+                <input type="checkbox" name="banana" id="banana">
+            </div>
+            <div>
+                <label for="apple">Apple</label>
+                <input type="checkbox" name="apple" id="apple">
+            </div>
+        </div>
+        <div>
+            Gender
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+        </div>
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor" multiple>
+                <option label="Brown"value="brown"></option>
+                <option label="Blue" value="blue"></option>
+                <option label="Green" value="green"></option>
+                <option label="Red" value="red"></option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" placeholder="Tell us about yourself..."></textarea>
+        </div>
+        <input type="hidden" name="hidden" value="hi">
+        <div>
+            <label for="file">File</label>
+            <input id="file" type="file" name="file">
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone">
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url" value="http://">
+        </div>
+        <div>
+            <label for="color">Favorite Color</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <div>
+            <!--nesting input inside label tag lets user click on label to go to input-->
+            <label>
+                Password*
+                <input type="password" name="password" required>
+            </label>
+        </div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
